@@ -6,16 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Min Cafe Site| Add Members</title>
   </head>
-  <body>
+  <body class="h-screen flex flex-col">
     <!-- header -->
     <header class="navbar container mx-auto bg-base-100">
       <div class="flex-1">
-        <a class="btn btn-ghost normal-case text-xl hover:bg-blue-500">Min Cafe</a>
+        <a href="./index.html" class="btn btn-ghost normal-case text-xl hover:bg-blue-500">Min Cafe</a>
       </div>
       <nav class="flex-none">
         <ul class="menu menu-horizontal px-1">
-          <li><a>All coffee</a></li>
-          <li><a>Members</a></li>
+          <li><a href="./all-coffee.html">All coffee</a></li>
+          <li><a >Members</a></li>
           <li><a>About Us</a></li>
           <!-- <li>
             <details>
@@ -31,37 +31,42 @@
         </ul>
       </nav>
     </header>
+
+    <div id="alert" class="toast hidden">
+      <div class="alert alert-info">
+        <span>Successful</span>
+      </div>
+    </div>
     
-    <section>
-        <div class="container mx-auto">
+    <main class="grow">
+      <section>
+        <div class="container mx-auto grid place-content-center">
             <h2 class="text-center text-4xl font-bold">Add a new members</h2>
-            <form class="mx-auto max-w-md">
+            <form class="mx-auto max-w-xl">
                   <div class="form-control w-full max-w-xs mt-4">
                     <label class="label">
                       Name               
                     </label>
-                    <input type="text" placeholder="Type here" class="input input-bordered input-warning w-full max-w-xs" />              
+                    <input id="name" type="text" placeholder="Type here" class="input input-bordered input-warning w-full max-w-xs" required/>              
                   </div>
                   
                   <div class="form-control w-full max-w-xs mt-4">
                     <label class="label">
-                      Username               
+                      Job Titel              
                     </label>
-                    <input type="text" placeholder="Type here" class="input input-bordered input-warning w-full max-w-xs" />              
+                    <input id="job" type="text" placeholder="Type here" class="input input-bordered input-warning w-full max-w-xs" required/>              
                   </div>
                   
-                  <div class="form-control w-full max-w-xs mt-4">
-                    <label class="label">
-                      Username               
-                    </label>
+                  <div class="form-control w-full max-w-xs mt-4">                 
                     <input type="file" class="file-input file-input-bordered  w-full max-w-xs" />              
                   </div>
                   <div class="flex justify-center mt-4">
-                    <button class="btn">save</button>
+                    <button id="submit-btn" class="btn">Submit</button>
                   </div>
             </form>
         </div>
     </section>
+    </main>
 
     <!-- footer -->
     <footer class="footer items-center container mx-auto p-4  mt-8">
@@ -78,5 +83,6 @@
       </footer>
   
     <script type="module" src="/main.js"></script>
+    <script src="./add-member.js"></script>
   </body>
 </html>

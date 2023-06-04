@@ -6,16 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Min Cafe Site| Members</title>
   </head>
-  <body>
+  <body class="h-screen flex flex-col">
     <!-- header -->
     <header class="navbar container mx-auto bg-base-100">
       <div class="flex-1">
-        <a class="btn btn-ghost normal-case text-xl hover:bg-blue-500">Min Cafe</a>
+        <a href="./index.html" class="btn btn-ghost normal-case text-xl hover:bg-blue-500">Min Cafe</a>
       </div>
       <nav class="flex-none">
         <ul class="menu menu-horizontal px-1">
-          <li><a>All coffee</a></li>
-          <li><a>Members</a></li>
+          <li><a href="./all-coffee.html">All coffee</a></li>
+          <li><a href="./member.html">Members</a></li>
           <li><a>About Us</a></li>
           <!-- <li>
             <details>
@@ -32,7 +32,8 @@
       </nav>
     </header>
     
-    <section>
+    <main class="grow">
+      <section >
         <h2 class="text-center text-4xl font-bold">Our Members</h2>
         <!-- Members card container -->
         <div class="flex justify-center flex-wrap gap-8 mt-4">
@@ -48,6 +49,7 @@
             </article>
         </div>
     </section>
+    </main>
 
     <!-- footer -->
     <footer class="footer items-center container mx-auto p-4  mt-8">
