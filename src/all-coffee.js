@@ -70,7 +70,7 @@ const addFeaturedCardContainer = (coffee) => {
     const articleElement = document.createElement("article");
     articleElement.classList.add("featured-card");
     articleElement.innerHTML = `
-            <figure id=${coffee.id} class = " max-h-60 ">
+            <figure id=${coffee.id} class = " h-52  ">
               <img 
                 src= ${coffee.image}
                 alt="coffee"

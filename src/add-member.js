@@ -16,7 +16,8 @@ form.addEventListener("submit" , async(e) => {
         job: jobInput.value,
     }
 
-    const res = await fetch("https://reqres.in/api/users", {
+    try {
+        const res = await fetch("https://reqres.in/api/users", {
         method: "POST" ,
         headers: {
             "Content-Type": "application/json" 
@@ -24,14 +25,16 @@ form.addEventListener("submit" , async(e) => {
         body: JSON.stringify(data),
     })
 
-    if(res.ok = true ) {
+    if(res.ok === true ) {
         AlertSection.style.display = "block";
         setTimeout(() => {
             AlertSection.style.display = "none";
           }, 3000);
         SubmitBtn.textContent = "Submit";
     }else{
-        alert(unsuccessful);
+        alert("unsuccessful");
     };
- 
-})
+    } catch (error) {
+        throw new Error (error)
+    }
+});
